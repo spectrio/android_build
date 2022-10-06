@@ -148,6 +148,8 @@ function check_product()
         LINEAGE_BUILD=$(echo -n $1 | sed -e 's/^lineage_//g')
     elif (echo -n $1 | grep -q -e "^enplug_") ; then
         LINEAGE_BUILD=$(echo -n $1 | sed -e 's/^enplug_//g')
+    elif (echo -n $1 | grep -q -e "^spectrio_") ; then
+        LINEAGE_BUILD=$(echo -n $1 | sed -e 's/^spectrio_//g')
     else
         LINEAGE_BUILD=
     fi
