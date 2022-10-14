@@ -17,7 +17,9 @@ BOARD_USES_SYSTEM_OTHER_ODEX :=
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Enable dynamic system image size and reserved 64MB in it.
+ifneq ($(TARGET_EXCLUDE_PREDEFINED_SYSTEMIMAGE_PARTITION_RESERVED_SIZE),true)
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 67108864
+endif
 
 # GSI forces product and system_ext packages to /system for now.
 TARGET_COPY_OUT_PRODUCT := system/product
